@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from Fusion import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('example/', views.example)
+    path('', views.get_vendor_form),
+    path('form_example/', views.get_form_example),
+    path('vendor_form/', views.get_vendor_form)
 ]

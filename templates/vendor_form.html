@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#not_cco").click(function () {
+            $("#cco_container").show();
+        })
+        $("#yes_cco").click(function () {
+            $("#cco_container").hide();
+        })
+    });
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}" />
+</head>
+<body>
+ <form class="column center" action="/form_example/" method="POST">
+     {% csrf_token %}
+     <div class="field-label">{{ form.name.label_tag }}</div>
+     <div> {{ form.name }}</div>
+     <div class="field-label">{{ form.phone_number.label_tag }}</div>
+     <div> {{ form.phone_number }}</div>
+     <div class="field-label">{{ form.email.label_tag }}</div>
+     <div> {{ form.email }}</div>
+     <div class="field-label">{{ form.name_of_business.label_tag }}</div>
+     <div> {{ form.name_of_business }}</div>
+     <div class="field-label">{{ form.type_of_legal_organization.label_tag }}</div>
+     <div> {{ form.type_of_legal_organization }}</div>
+     <div class="field-label">{{ form.FEIN_code.label_tag }}</div>
+     <div> {{ form.FEIN_code }}</div>
+     <div class="field-label">{{ form.NAICS_code.label_tag }}</div>
+     <div> {{ form.NAICS_code }}</div>
+     <div class="field-label">{{ form.mailing_address.label_tag }}</div>
+     <div> {{ form.mailing_address }}</div>
+     <div class="field-label">{{ form.physical_location.label_tag }}</div>
+     <div> {{ form.physical_location }}</div>
+     <div class="field-label">{{ form.short_business_description.label_tag }}</div>
+     <div> {{ form.short_business_description }}</div>
+     <div class="field-label">Are you a chief compliance officer?</div>
+     <div>
+         <input type="radio" id="yes_cco" name="cco" value="Yes"><label>Yes</label>
+         <input type="radio" id="not_cco" name="cco" value="No"><label>No</label>
+     </div>
+    <div id="cco_container" >
+        <div class="field-label">{{ form.chief_compliance_officer_name.label_tag }}</div>
+        <div> {{ form.chief_compliance_officer_name }}</div>
+        <div class="field-label">{{ form.chief_compliance_officer_phone.label_tag }}</div>
+        <div> {{ form.chief_compliance_officer_phone }}</div>
+        <div class="field-label">{{ form.chief_compliance_officer_email.label_tag }}</div>
+        <div> {{ form.chief_compliance_officer_email }}</div>
+    </div>
+     <div class="field-label">Environmental Compliance</div>
+     <div>ISO 14000 sets out the criteria for an environmental management system and can be certified to. It maps out a framework that a company or organization can follow to set up an effective environmental management system. Are you ISO 14000 certified? </div>
+     <div class="field-label">{{ form.certificate.label_tag }}</div>
+     <div> {{ form.certificate }}</div>
+    <p>In order to become ISO 14001 certified, you will be required to hire an external certification body that can assess your business process procedures in terms of their adherence to ISO 14000 requirements. Certification bodies can utilize ISO’s Committee on Conformity Assessment (CASCO), which provides standards related to the certification process. </p>
+     <div class="field-label">If you are not ISO 14000 certified, are you willing to get this certification?</div>
+     <div>
+         <input type="radio" name="willing_to_obtain_certificate" value="Yes"><label>Yes</label>
+         <input type="radio" name="willing_to_obtain_certificate" value="No"><label>No</label>
+         <input type="radio" name="willing_to_obtain_certificate" value="N/A"><label>N/A</label>
+     </div>
+     <div class="field-label">Social Responsibility Compliance</div>
+     <div>The ISO 26000 helps clarify what social responsibility is, helps businesses and organizations translate principles into effective actions and shares best practices relating to social responsibility, globally. It is aimed at all types of organizations regardless of their activity, size or location. Does your company follow ISO 26000 standards?</div>
+     <div>
+         <input type="radio" name="follow_26000" value="Yes"><label>Yes</label>
+         <input type="radio" name="follow_26000" value="No"><label>No</label>
+     </div>
+     <div>If yes, would you be willing to provide your Code of Business Conduct and Ethics?</div>
+     <div>
+         <input type="radio" name="CBCE" value="Yes"><label>Yes</label>
+         <input type="radio" name="CBCE" value="No"><label>No</label>
+         <input type="radio" name="CBCE" value="N/A"><label>N/A</label>
+     </div>
+     <div class="field-label">Governance Compliance</div>
+     <div>The ISO 37000 provides guidelines for the governance of organizations. It provides key principles, relevant practices and a framework to guide the governance of organizations in how to meet their responsibilities so that organizations can fulfil their purpose. It is applicable to all organizations, regardless of type, size, location, structure or purpose. Does your company follow ISO 37000 standards? </div>
+     <div>
+         <input type="radio" name="follow_37000" value="Yes"><label>Yes</label>
+         <input type="radio" name="follow_37000" value="No"><label>No</label>
+     </div>
+     <div>If yes, would you be willing to provide your Corporate Governance Guidelines?</div>
+     <div>
+         <input type="radio" name="CGC" value="Yes"><label>Yes</label>
+         <input type="radio" name="CGC" value="No"><label>No</label>
+         <input type="radio" name="N/A" value="N/A"><label>N/A</label>
+     </div>
+     <input type="submit">
+</form>
+ <form class="column center" action="/vendor_form/" method="POST">
+     {% csrf_token %}
+     {{ form.as_p }}
+     <input type="submit">
+ </form>
+</body>
+</html>

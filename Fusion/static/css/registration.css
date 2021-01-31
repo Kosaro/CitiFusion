@@ -1,0 +1,17 @@
+.center{
+    margin: auto;
+    width: 600px
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.field-label{
+    margin-top: .5rem;
+    font-weight: bold;
+}
+
+#cco_container{
+    display: none;
+}
