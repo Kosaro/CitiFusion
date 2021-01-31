@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Small Business Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}" />
+</head>
+<body>
+ <form class="column center" action="/business_form/" method="POST">
+     {% csrf_token %}
+     <table>
+         {{ form.as_table }}
+     </table>
+     <div>CitiFusion requires you to have an account with Citi in order to register. If you do not have an account, create one here:
+         <a href="https://online.citi.com/US/ag/small-business-banking">Create Account</a>
+     </div>
+     <p>CitiFusion provides an additional 1% cashback on all purchases made with a Citi Credit Card through the platform. This is recommended to receive the full benefits of the CitiFusion program.</p>
+     <div class="submit_button">
+         <input type="submit">
+     </div>
+</form>
+</body>
+</html>

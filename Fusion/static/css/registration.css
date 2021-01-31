@@ -11,7 +11,19 @@
     margin-top: .5rem;
     font-weight: bold;
 }
+label{
+    margin-top: .5rem;
+    font-weight: bold;
+    text-align: right;
+}
+th{
+   text-align: right;
+}
 
 #cco_container{
     display: none;
+}
+.submit_button{
+    display: flex;
+    justify-content: center;
 }
