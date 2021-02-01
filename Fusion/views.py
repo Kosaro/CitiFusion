@@ -3,26 +3,6 @@ from django.shortcuts import render
 from Fusion.forms import *
 
 
-def example(request):
-    return render(request, 'example.html')
-
-
-def get_form_example(request):
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = ExampleForm(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            return HttpResponseRedirect('/thanks/')
-
-    # if a GET (or any outher method) we'll create a blank form
-    else:
-        form = ExampleForm()
-    return render(request, "form_test.html", {'form': form})
 
 
 def get_vendor_form(request):
@@ -74,3 +54,10 @@ def thank_you_business(request):
 
 def get_home(request):
     return render(request, "home.html")
+
+def get_about(request):
+    return render(request, "about.html")
+
+def get_benefits(request):
+    return render(request, "benefits.html")
+
