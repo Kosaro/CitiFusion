@@ -43,7 +43,7 @@ nav ul li {
 }
 
 #intro {
-  background-image: url("/static/images/intro.jpg")
+  background-image: url("/static/images/intro.jpg");
   margin: 0%;
   left: 0;
   height: 58.5%;
