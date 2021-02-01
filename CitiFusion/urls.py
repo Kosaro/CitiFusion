@@ -19,7 +19,7 @@ from Fusion import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.get_vendor_form),
+    path('', views.get_home),
     path('form_example/', views.get_form_example),
     path('vendor_form/', views.get_vendor_form),
     path('business_form/', views.get_small_business_form),

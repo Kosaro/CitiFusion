@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CitiFusion - Home</title>
   <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
 
 <style>
   body {
@@ -35,7 +37,7 @@
 
 <body>
 <div id="header">
-  <p><a href="home.html"><img src="citi-logo.png" style="float:left"
+  <p><a href="home.html"><img src="{% static 'images/citi-logo.png' %}"  style="float:left"
     height="131.5"/></a>
  </div>
 

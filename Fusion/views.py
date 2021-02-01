@@ -71,3 +71,6 @@ def thank_you_vendor(request):
 
 def thank_you_business(request):
     return render(request, "thank_you_business.html")
+
+def get_home(request):
+    return render(request, "home.html")
