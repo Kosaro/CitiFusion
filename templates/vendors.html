@@ -19,8 +19,9 @@
 <body>
 <div class="column center">
 <h2>Vendors</h2>
-{{ form.industry_type.label_tag }}
-    {{ form.industry_type }}
+
+    <div>{{ form.industry_type.label_tag }}</div>
+    <div>{{ form.industry_type }}</div>
     {% for key, value in data.items %}
         <div id="{{ key }}" class="industry">
             {% for vendor in value %}
