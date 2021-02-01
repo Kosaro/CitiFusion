@@ -6,6 +6,69 @@
     <title>Thank you!</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}" />
 </head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #FFFFFF;
+  }
+
+  .form_button {
+    text-align: center;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    position: absolute;
+
+  }
+
+  .welcome {
+    margin: 5%;
+    font-size: 55.5px;
+    color: #000000;
+    text-align: center;
+  }
+
+</style>
+</head>
+
+<body>
+<div id="header">
+  <p><a href=""><img src="{% static 'images/citi-logo.png' %}" style="float:left"
+    height="131.5"/></a>
+ </div>
+
+<!-- Sections to separate pages -->
+<body>
+  <header>
+    <a href="home.html"></a>
+    <div id="sections">
+    <nav>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/benefits/">Benefits</a></li>
+        <li><a href="/vendor_form">Vendor Registration Form</a></li>
+        <li><a href="/business_form/">Small Business Registration Form</a></li>
+        <li><a>Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header><br/><br/><br/><br/><br/><br/></br>
+</body>
+<!-- Welcome banner with button that redirects user to respective CitiFusion form -->
+<div class="form_button" id="intro">
+  <h1 class="welcome"> <b>Welcome to CitiFusion! We make sure to provide assistance and incentives
+  to follow ESG practices. Join us, and learn more about it in our About Us page!</b></h1>
+  <h3><button><a href="/vendor_form/">Vendor</a></button></h3>
+  <h3><button><a href="/business_form/">Small Business</a></button></h3>
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <body>
 <div class="center column">
     <h2>Thank you for applying to become a CitiFusion Vendor.</h2>
