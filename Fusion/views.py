@@ -16,7 +16,7 @@ def get_vendor_form(request):
             # redirect to a new URL:
             registration = form.save(commit=False)
             registration.save()
-            return HttpResponseRedirect('/thank_you/')
+            return HttpResponseRedirect('/thank_you_vendor/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
@@ -37,7 +37,7 @@ def get_small_business_form(request):
             # redirect to a new URL:
             registration = form.save(commit=False)
             registration.save()
-            return HttpResponseRedirect('/thank_you/')
+            return HttpResponseRedirect('/thank_you_business/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
@@ -60,6 +60,9 @@ def get_home(request):
 def get_about(request):
     return render(request, "about.html")
 
+
+def get_benefits(request):
+    return render(request, "benefits.html")
 
 def get_benefits(request):
     return render(request, "benefits.html")
