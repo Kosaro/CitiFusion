@@ -27,3 +27,7 @@ th{
     display: flex;
     justify-content: center;
 }
+
+.industry{
+    display: none;
+}

@@ -64,5 +64,9 @@ def get_about(request):
 def get_benefits(request):
     return render(request, "benefits.html")
 
-def get_benefits(request):
-    return render(request, "benefits.html")
+def get_vendors(request):
+    items = {}
+    form = VendorRegistraionForm()
+    for industry, _ in industry_choices:
+        items[industry] = Vendor.objects.filter(industry_type=industry)
+    return render(request, "vendors.html", {"data": items, "form": form})

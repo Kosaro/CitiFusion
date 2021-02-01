@@ -18,7 +18,6 @@ org_choices = (
 
 industry_choices = (
     ('a', 'Consumer Goods'),
-    ('b', 'Financials'),
     ('c', 'Food & Beverage'),
     ('d', 'Healthcare'),
     ('e', 'Infrastructure'),

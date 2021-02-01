@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#id_industry_type").click(function () {
+            $(".industry").hide();
+            $("#"+$(this).val()).show();
+        })
+
+    });
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Vendors</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}" />
+</head>
+<body>
+<div class="column center">
+<h2>Vendors</h2>
+{{ form.industry_type.label_tag }}
+    {{ form.industry_type }}
+    {% for key, value in data.items %}
+        <div id="{{ key }}" class="industry">
+            {% for vendor in value %}
+                <p>
+                <a href="{{ vendor.url }}">{{ vendor.name }}</a>
+                </p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>

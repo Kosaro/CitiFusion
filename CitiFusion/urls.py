@@ -26,4 +26,5 @@ urlpatterns = [
     path('thank_you_business/', views.thank_you_business),
     path('about/', views.get_about),
     path('benefits/', views.get_benefits),
+    path('vendors/', views.get_vendors),
 ]
