@@ -44,7 +44,7 @@
 <!-- Sections to separate pages -->
 <body>
   <header>
-    <a href="home.html"></a>
+    <a href=""></a>
     <div id="sections">
     <nav>
       <ul>
@@ -57,7 +57,6 @@
     </nav>
   </div>
 </header><br/><br/><br/><br/><br/><br/></br>
-</body>
 <!-- Welcome banner with button that redirects user to respective CitiFusion form -->
 <div class="form_button" id="intro">
   <h1 class="welcome"> <b>Welcome to CitiFusion! We make sure to provide assistance and incentives
@@ -66,12 +65,8 @@
   <h3><button><a href="/business_form/">Small Business</a></button></h3>
 
 </div>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-<body>
- <form class="column center" action="/business_form/" method="POST">
+ <form class="column center top_margin" action="/business_form/" method="POST">
      {% csrf_token %}
      <table>
          {{ form.as_table }}
