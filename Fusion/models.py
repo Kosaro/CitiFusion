@@ -63,7 +63,8 @@ class VendorRegistraion(models.Model):
     short_business_description = CharField(max_length=300)
     chief_compliance_officer = BooleanField()
     chief_compliance_officer_name = CharField(max_length=50)
-    chief_compliance_officer_phone = models.CharField(validators=[phone_regex], max_length=17)  # validators should be a list
+    chief_compliance_officer_phone = models.CharField(validators=[phone_regex],
+                                                      max_length=17)  # validators should be a list
     chief_compliance_officer_email = EmailField()
 
     certificate = CharField(choices=certificate_choices, max_length=1)
@@ -94,3 +95,9 @@ class SmallBusinessRegistration(models.Model):
 
     def __str__(self):
         return self.name_of_business
+
+
+class Vendor(models.Model):
+    name = CharField(max_length=20)
+    industry_type = CharField(choices=industry_choices, max_length=1)
+    url = URLField()
