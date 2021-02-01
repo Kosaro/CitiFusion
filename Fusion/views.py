@@ -3,8 +3,6 @@ from django.shortcuts import render
 from Fusion.forms import *
 
 
-
-
 def get_vendor_form(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -46,18 +44,22 @@ def get_small_business_form(request):
         form = SmallBusinessRegistraionForm()
     return render(request, "small_business_form.html", {'form': form})
 
+
 def thank_you_vendor(request):
     return render(request, "thank_you_vendor.html")
+
 
 def thank_you_business(request):
     return render(request, "thank_you_business.html")
 
+
 def get_home(request):
     return render(request, "home.html")
+
 
 def get_about(request):
     return render(request, "about.html")
 
+
 def get_benefits(request):
     return render(request, "benefits.html")
-
